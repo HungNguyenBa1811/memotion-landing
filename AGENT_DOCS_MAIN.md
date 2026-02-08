@@ -1,7 +1,7 @@
 ## Configuration for Design Agent
 Role: Professional UI/UX Designer specializing in Digital Health and MedTech platforms.
 
-Task: Create a high-fidelity desktop web landing page design for "RehabConnect" (placeholder name) – an AI-powered rehabilitation app connecting caregivers and elderly patients.
+Task: Create a high-fidelity desktop web landing page design for "Memotion" (placeholder name) – an AI-powered rehabilitation app connecting caregivers and elderly patients.
 
 Vibe: Trustworthy, compassionate, high-tech yet accessible, professional, hopeful, and clean. It must bridge the gap between clinical expertise and home care warmth.
 

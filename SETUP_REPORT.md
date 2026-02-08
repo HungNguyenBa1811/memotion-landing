@@ -1,10 +1,10 @@
-# Setup Report - RehabConnect Landing Page
+# Setup Report - Memotion Landing Page
 
 ## Date: 2026-02-08
 
 ### Configuration Status: COMPLETE
 
-The project has been successfully configured with the following stack and libraries, adhering to the "RehabConnect" design specifications.
+The project has been successfully configured with the following stack and libraries, adhering to the "Memotion" design specifications.
 
 ### Tech Stack & Dependencies
 - **Framework:** React 19 + Vite 7

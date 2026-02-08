@@ -1,19 +1,31 @@
-import { useState } from 'react'
-import { Button } from './components/ui/Button'
+import React from 'react';
+import { Header, Footer } from './components/layout';
+import { 
+  Hero, 
+  TrustIndicators, 
+  CoreTechnology, 
+  Mission, 
+  Team, 
+  CallToAction,
+  Testimonials
+} from './components/sections';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-background gap-4">
-      <h1 className="text-3xl font-bold text-primary">
-        RehabConnect - Setup Complete
-      </h1>
-      <div className="flex gap-4">
-        <Button>Primary Button</Button>
-        <Button variant="accent">Accent Button</Button>
-      </div>
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="flex-1">
+        <Hero />
+        <TrustIndicators />
+        <CoreTechnology />
+        <Mission />
+        <Testimonials />
+        <Team />
+        <CallToAction />
+      </main>
+      <Footer />
     </div>
-  )
+  );
 }
 
-
-export default App
+export default App;
