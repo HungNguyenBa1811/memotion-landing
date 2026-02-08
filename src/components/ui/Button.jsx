@@ -10,8 +10,8 @@ const Button = React.forwardRef(({ className, variant = 'primary', size = 'defau
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2",
         "disabled:pointer-events-none disabled:opacity-40",
         {
-          'bg-primary text-white hover:bg-primary-hover active:bg-primary-dark': variant === 'primary',
-          'bg-transparent text-primary border border-primary hover:bg-primary/5 active:bg-primary/10': variant === 'outline',
+          'bg-accent !text-white hover:bg-accent-hover active:bg-accent-hover': variant === 'primary',
+          'bg-transparent text-accent border border-accent hover:bg-accent/5 active:bg-accent/10': variant === 'outline',
           'bg-surface-tertiary text-text hover:bg-[#E8E8ED] active:bg-[#D2D2D7]': variant === 'secondary',
           'bg-text text-white hover:bg-[#424245] active:bg-[#6E6E73]': variant === 'dark',
           'bg-transparent text-primary hover:text-primary-hover p-0': variant === 'link',
