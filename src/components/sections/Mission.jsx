@@ -1,52 +1,61 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const appleEase = [0.28, 0.11, 0.32, 1];
+
 export function Mission() {
   return (
-    <section id="mission" className="relative overflow-hidden py-24 bg-primary-light/10">
-      <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div 
-            className="order-2 lg:order-1"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-5xl font-bold text-text mb-8 leading-tight">
-              Sứ mệnh của Memotion: Để tuổi già không bao giờ là rào cản của sự độc lập.
-            </h2>
-            <p className="text-xl text-text-muted mb-8 leading-relaxed">
-              Chúng tôi tin rằng với sự hỗ trợ đúng đắn từ công nghệ, quá trình hồi phục luôn khả thi. Memotion trao quyền cho các gia đình để kiểm soát sức khỏe tại nhà, lấp đầy khoảng trống y tế bằng lòng trắc ẩn và sự chính xác.
-            </p>
-            <div className="flex items-center gap-4 py-4 border-t border-primary/10">
-              <div className="h-12 w-12 rounded-full bg-accent flex items-center justify-center text-white font-bold">
-                M
-              </div>
-              <div>
-                <p className="font-bold text-text">Cam kết từ Đội ngũ sáng lập</p>
-                <p className="text-sm text-text-muted">Chuyên môn y khoa & Sự ấm áp gia đình</p>
-              </div>
-            </div>
-          </motion.div>
+    <section id="mission" className="py-section-lg bg-surface-tertiary">
+      <div className="mx-auto max-w-apple px-6 lg:px-8 text-center">
+        {/* Overline */}
+        <motion.p
+          className="text-body text-accent font-medium mb-3"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: appleEase }}
+        >
+          Sứ mệnh
+        </motion.p>
 
-          <motion.div 
-            className="order-1 lg:order-2 relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent z-10" />
-            <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-center p-12 text-2xl z-20">
-               [Inspiring Photo: Elderly person walking outdoors without assistance]
-            </div>
-            {/* Visual background simulation */}
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516307362725-3222770d1001?auto=format&fit=crop&q=80')] bg-cover bg-center grayscale-[20%]" />
-          </motion.div>
-        </div>
+        {/* Large mission statement */}
+        <motion.h2
+          className="text-headline-sm md:text-headline lg:text-display text-text max-w-4xl mx-auto mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: appleEase, delay: 0.1 }}
+        >
+          Để tuổi già không bao giờ là rào cản của sự độc lập.
+        </motion.h2>
+
+        {/* Supporting paragraph */}
+        <motion.p
+          className="text-body-xl text-text-secondary max-w-apple-narrow mx-auto mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: appleEase, delay: 0.2 }}
+        >
+          Chúng tôi tin rằng với sự hỗ trợ đúng đắn từ công nghệ, quá trình hồi phục luôn khả thi.
+          Memotion trao quyền cho các gia đình để kiểm soát sức khỏe tại nhà,
+          lấp đầy khoảng trống y tế bằng lòng trắc ẩn và sự chính xác.
+        </motion.p>
       </div>
-      
-      {/* Decorative */}
-      <div className="absolute top-0 right-0 h-64 w-64 bg-accent/5 rounded-full blur-3xl" />
+
+      {/* Full-bleed image */}
+      <motion.div
+        className="mx-auto max-w-apple-wide px-6 lg:px-8"
+        initial={{ opacity: 0, scale: 0.98 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.0, ease: appleEase, delay: 0.3 }}
+      >
+        <div className="relative aspect-[21/9] rounded-apple-xl overflow-hidden bg-surface">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516307362725-3222770d1001?auto=format&fit=crop&q=80')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        </div>
+      </motion.div>
     </section>
   );
 }

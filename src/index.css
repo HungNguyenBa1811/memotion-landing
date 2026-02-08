@@ -3,7 +3,33 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
   body {
-    @apply bg-background text-text font-sans antialiased;
+    @apply bg-surface text-text font-sans;
+    font-size: 17px;
+    line-height: 1.47;
+  }
+
+  ::selection {
+    background-color: rgba(0, 113, 227, 0.15);
+    color: #1D1D1F;
+  }
+}
+
+@layer utilities {
+  .glass {
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255, 255, 255, 0.72);
+  }
+
+  .section-divider {
+    @apply w-full h-px bg-border-light;
   }
 }

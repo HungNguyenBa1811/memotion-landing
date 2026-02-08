@@ -2,89 +2,111 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { User } from 'lucide-react';
 
+const appleEase = [0.28, 0.11, 0.32, 1];
+
 const advisors = [
   {
     name: "ThS. Nguyễn Văn Hinh",
     role: "Cố vấn Công nghệ & Kỹ thuật",
     credential: "Chuyên viên QTKHCN & HTQT - PTIT",
-    task: "Định hướng kiến trúc sản phẩm, đảm bảo tính tiên phong của công nghệ lõi."
   },
   {
     name: "TS. Nguyễn Thanh Nga",
     role: "Cố vấn Chiến lược & Kinh tế",
     credential: "Giảng viên Khoa QTKD1 - PTIT",
-    task: "Vạch ra lộ trình phát triển bền vững, tối ưu hóa chi phí người dùng."
   },
   {
     name: "Trung tá ThS.Bs Nguyễn Hữu Dương",
     role: "Cố vấn Y khoa chuyên môn",
     credential: "Phó Chủ nhiệm Khoa C13 - Viện YHCT Quân Đội",
-    task: "Kiểm định bài tập, đánh giá thuật toán theo chuẩn y tế khắt khe."
-  }
+  },
 ];
 
 const builders = [
-  { name: "Vũ Đình Hiếu", role: "CTO", affiliation: "PTIT" },
-  { name: "Nguyễn Hải Nam", role: "Developer", affiliation: "PTIT" },
-  { name: "Nguyễn Bá Hùng", role: "Developer", affiliation: "PTIT" },
-  { name: "Nguyễn Thị Thoa", role: "Business Analyst", affiliation: "PTIT" },
-  { name: "Phùng Thị Hồng Vân", role: "Business Analyst", affiliation: "NEU" }
+  { name: "Vũ Đình Hiếu", role: "CTO" },
+  { name: "Nguyễn Hải Nam", role: "Developer" },
+  { name: "Nguyễn Bá Hùng", role: "Developer" },
+  { name: "Nguyễn Thị Thoa", role: "Business Analyst" },
+  { name: "Phùng Thị Hồng Vân", role: "Business Analyst" },
 ];
 
 export function Team() {
   return (
-    <section id="team" className="py-24 bg-white">
-      <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-text mb-6">Đội ngũ chuyên gia & Cố vấn</h2>
-          <p className="text-text-muted text-lg">
-            Sự kết hợp giữa chuyên môn y tế khắt khe và công nghệ trí tuệ nhân tạo đột phá từ các học viện hàng đầu.
-          </p>
+    <section id="team" className="py-section-lg bg-surface-secondary">
+      <div className="mx-auto max-w-apple px-6 lg:px-8">
+        {/* Section header */}
+        <div className="text-center mb-section-sm">
+          <motion.p
+            className="text-body text-accent font-medium mb-3"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: appleEase }}
+          >
+            Đội ngũ
+          </motion.p>
+          <motion.h2
+            className="text-headline-sm md:text-headline text-text mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: appleEase, delay: 0.1 }}
+          >
+            Chuyên gia & Cố vấn
+          </motion.h2>
+          <motion.p
+            className="text-body-lg text-text-secondary max-w-apple-narrow mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: appleEase, delay: 0.2 }}
+          >
+            Sự kết hợp giữa chuyên môn y tế và công nghệ trí tuệ nhân tạo từ các học viện hàng đầu.
+          </motion.p>
         </div>
 
         {/* Advisors */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-20">
           {advisors.map((member, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
-              className="bg-background rounded-3xl p-8 border border-primary/10 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center"
+              className="text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.1, duration: 0.8, ease: appleEase }}
             >
-              {/* Placeholder Ảnh Cố vấn */}
-              <div className="w-32 h-32 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 overflow-hidden border-2 border-primary/5">
-                 <User size={48} className="text-primary/20" />
+              <div className="w-32 h-32 rounded-full bg-surface-tertiary mx-auto mb-6 flex items-center justify-center">
+                <User size={40} className="text-text-tertiary" />
               </div>
-
-              <h3 className="text-xl font-bold text-text mb-1">{member.name}</h3>
-              <p className="text-primary font-bold text-sm mb-2">{member.role}</p>
-              <p className="text-xs font-semibold text-text-muted uppercase mb-4">{member.credential}</p>
-              <p className="text-sm text-text-muted leading-relaxed italic border-t border-primary/5 pt-4">
-                "{member.task}"
-              </p>
+              <h3 className="text-body font-semibold text-text mb-1">{member.name}</h3>
+              <p className="text-body-sm text-accent mb-1">{member.role}</p>
+              <p className="text-caption text-text-tertiary">{member.credential}</p>
             </motion.div>
           ))}
         </div>
 
+        {/* Divider */}
+        <div className="section-divider mb-16" />
+
         {/* Builders */}
-        <div className="pt-12 border-t border-primary/5 text-center">
-          <h4 className="text-2xl font-bold text-text mb-10 italic">Đội ngũ phát triển tài năng</h4>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="text-center">
+          <h3 className="text-title-sm text-text mb-10">Đội ngũ phát triển</h3>
+          <div className="flex flex-wrap items-center justify-center gap-12">
             {builders.map((member, idx) => (
-              <motion.div 
-                key={idx} 
-                className="bg-white p-6 rounded-2xl shadow-sm border border-primary/5 flex flex-col items-center"
-                whileHover={{ y: -5 }}
+              <motion.div
+                key={idx}
+                className="text-center"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.05, duration: 0.6, ease: appleEase }}
               >
-                {/* Placeholder Ảnh Developer */}
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 border border-accent/5">
-                   <User size={24} className="text-accent/30" />
+                <div className="w-20 h-20 rounded-full bg-surface-tertiary mx-auto mb-4 flex items-center justify-center">
+                  <User size={28} className="text-text-tertiary" />
                 </div>
-                <span className="font-bold text-text text-sm">{member.name}</span>
-                <span className="text-[11px] text-primary font-medium">{member.role}</span>
-                <span className="text-[10px] text-text-muted uppercase tracking-tighter">{member.affiliation}</span>
+                <p className="text-body-sm font-semibold text-text">{member.name}</p>
+                <p className="text-caption text-text-secondary">{member.role}</p>
               </motion.div>
             ))}
           </div>
