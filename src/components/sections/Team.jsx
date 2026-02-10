@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { User } from 'lucide-react';
+import hieuImg from '../../assets/images/hieu.JPG';
+import hungImg from '../../assets/images/hung.JPG';
+import namImg from '../../assets/images/nam.JPG';
+import thoaImg from '../../assets/images/thoa.JPG';
 
 const appleEase = [0.28, 0.11, 0.32, 1];
 
@@ -23,10 +27,10 @@ const advisors = [
 ];
 
 const builders = [
-    { name: 'Vũ Đình Hiếu', role: 'CTO', imgSrc: 'src/assets/images/hieu.JPG' },
-    { name: 'Nguyễn Hải Nam', role: 'Developer', imgSrc: 'src/assets/images/hung.JPG' },
-    { name: 'Nguyễn Bá Hùng', role: 'Developer', imgSrc: 'src/assets/images/nam.JPG' },
-    { name: 'Nguyễn Thị Thoa', role: 'Business Analyst', imgSrc: 'src/assets/images/thoa.JPG' },
+    { name: 'Vũ Đình Hiếu', role: 'CTO', imgSrc: hieuImg },
+    { name: 'Nguyễn Hải Nam', role: 'Developer', imgSrc: hungImg },
+    { name: 'Nguyễn Bá Hùng', role: 'Developer', imgSrc: namImg },
+    { name: 'Nguyễn Thị Thoa', role: 'Business Analyst', imgSrc: thoaImg },
     { name: 'Phùng Thị Hồng Vân', role: 'Business Analyst' },
 ];
 
