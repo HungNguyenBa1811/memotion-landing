@@ -6,7 +6,8 @@
       "Bash(npm test:*)",
       "Bash(npx vitest --run --pool=forks)",
       "WebFetch(domain:codepen.io)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(npm install:*)"
     ]
   }
 }
