@@ -5,7 +5,7 @@ const appleEase = [0.28, 0.11, 0.32, 1];
 
 export function Mission() {
   return (
-    <section id="mission" className="py-section-lg bg-surface-tertiary">
+    <section id="mission" className="py-section-lg bg-surface">
       <div className="mx-auto max-w-apple px-6 lg:px-8 text-center">
         {/* Overline */}
         <motion.p
@@ -51,9 +51,9 @@ export function Mission() {
         viewport={{ once: true }}
         transition={{ duration: 1.0, ease: appleEase, delay: 0.3 }}
       >
-        <div className="relative aspect-[21/9] rounded-apple-xl overflow-hidden bg-surface">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516307362725-3222770d1001?auto=format&fit=crop&q=80')] bg-cover bg-center" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        <div className="relative aspect-[16/9] rounded-apple-xl overflow-hidden bg-surface">
+          <div className="absolute inset-0 bg-[url('src/assets/images/mission.jpg')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1B4332]/30 to-transparent" />
         </div>
       </motion.div>
     </section>

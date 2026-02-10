@@ -4,7 +4,9 @@
       "Bash(dir:*)",
       "Bash(npm run build:*)",
       "Bash(npm test:*)",
-      "Bash(npx vitest --run --pool=forks)"
+      "Bash(npx vitest --run --pool=forks)",
+      "WebFetch(domain:codepen.io)",
+      "Bash(curl:*)"
     ]
   }
 }

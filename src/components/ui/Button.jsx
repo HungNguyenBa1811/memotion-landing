@@ -12,8 +12,8 @@ const Button = React.forwardRef(({ className, variant = 'primary', size = 'defau
         {
           'bg-accent !text-white hover:bg-accent-hover active:bg-accent-hover': variant === 'primary',
           'bg-transparent text-accent border border-accent hover:bg-accent/5 active:bg-accent/10': variant === 'outline',
-          'bg-surface-tertiary text-text hover:bg-[#E8E8ED] active:bg-[#D2D2D7]': variant === 'secondary',
-          'bg-text text-white hover:bg-[#424245] active:bg-[#6E6E73]': variant === 'dark',
+          'bg-surface-tertiary text-text hover:bg-[#D4E2D4] active:bg-[#B8CCBD]': variant === 'secondary',
+          'bg-text text-white hover:bg-[#2D5A43] active:bg-[#3D6B55]': variant === 'dark',
           'bg-transparent text-primary hover:text-primary-hover p-0': variant === 'link',
           'h-11 px-6 text-body-sm': size === 'default',
           'h-9 px-4 text-caption': size === 'sm',

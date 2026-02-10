@@ -36,7 +36,7 @@ export function Footer() {
       </div>
 
       {/* Link columns */}
-      <div className="mx-auto max-w-apple-wide px-6 lg:px-8 py-5">
+      <div className="mx-auto max-w-apple-wide px-6 lg:px-8 py-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* Brand column */}
           <div>
@@ -72,9 +72,6 @@ export function Footer() {
         <div className="py-4 flex flex-col md:flex-row items-center justify-between">
           <p className="text-caption text-text-tertiary">
             &copy; 2026 Memotion. Bản quyền thuộc về đội ngũ phát triển Memotion.
-          </p>
-          <p className="text-caption text-text-tertiary mt-2 md:mt-0">
-            Phát triển dành cho người cao tuổi Việt Nam.
           </p>
         </div>
       </div>
