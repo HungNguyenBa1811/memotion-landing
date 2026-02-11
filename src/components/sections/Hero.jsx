@@ -65,11 +65,12 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 1.0, ease: appleEase, delay: 0.5 }}
             >
-                <div className="relative aspect-[16/9] md:aspect-[2/1] rounded-apple-xl overflow-hidden bg-surface-tertiary shadow-2xl">
+                <div className="relative aspect-[16/9] md:aspect-[2/1] rounded-apple-xl overflow-hidden bg-surface-tertiary shadow-2xl group">
                     <div className="absolute inset-0 flex items-center justify-center text-text-tertiary text-body">
                         <img
                             src={productScreenshot}
-                            alt="[Product Screenshot: App dashboard showing rehabilitation progress]"
+                            alt="Giao diện ứng dụng Memotion hiển thị tiến trình phục hồi chức năng"
+                            className="transition-transform duration-500 ease-[cubic-bezier(0.28,0.11,0.32,1)] group-hover:scale-[1.03]"
                         />
                     </div>
                 </div>

@@ -33,3 +33,21 @@
     @apply w-full h-px bg-border-light;
   }
 }
+
+/* Animated Crown */
+@keyframes crown-back-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-77px); }
+}
+@keyframes crown-front-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(154px); }
+}
+@keyframes crown-sheen-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(600px); }
+}
+
+.crown-back  { animation: crown-back-scroll  2s linear infinite; }
+.crown-front { animation: crown-front-scroll  4s linear infinite; }
+.crown-sheen { animation: crown-sheen-scroll  4s linear infinite; }

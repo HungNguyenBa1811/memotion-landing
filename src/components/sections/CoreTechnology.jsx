@@ -123,11 +123,11 @@ export function CoreTechnology() {
 
                                 {/* Visual side */}
                                 <div className={isReversed ? 'lg:order-1' : 'lg:order-2'}>
-                                    <div className="aspect-video rounded-apple-xl overflow-hidden bg-surface-tertiary shadow-2xl">
+                                    <div className="aspect-video rounded-apple-xl overflow-hidden bg-surface-tertiary shadow-2xl group cursor-pointer">
                                         <img
                                             src={feature.image}
                                             alt={feature.imageAlt}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.28,0.11,0.32,1)] group-hover:scale-[1.04]"
                                             loading="lazy"
                                         />
                                     </div>

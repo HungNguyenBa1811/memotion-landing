@@ -52,9 +52,10 @@ export function Testimonials() {
           {testimonials.map((item, idx) => (
             <motion.blockquote
               key={idx}
-              className="bg-surface-tertiary rounded-apple-xl p-8 lg:p-10 flex flex-col"
+              className="bg-surface-tertiary rounded-apple-xl p-8 lg:p-10 flex flex-col cursor-default"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6, boxShadow: '0 20px 40px -12px rgba(0, 105, 92, 0.12)' }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.8, ease: appleEase }}
             >

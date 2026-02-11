@@ -52,8 +52,8 @@ export function Mission() {
                 viewport={{ once: true }}
                 transition={{ duration: 1.0, ease: appleEase, delay: 0.3 }}
             >
-                <div className="relative aspect-[21/9] rounded-apple-xl overflow-hidden bg-surface">
-                    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${missionImg})` }} />
+                <div className="relative aspect-[21/9] rounded-apple-xl overflow-hidden bg-surface group">
+                    <div className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-[cubic-bezier(0.28,0.11,0.32,1)] group-hover:scale-[1.04]" style={{ backgroundImage: `url(${missionImg})` }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1B4332]/30 to-transparent" />
                 </div>
             </motion.div>
