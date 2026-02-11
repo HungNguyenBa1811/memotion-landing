@@ -28,8 +28,8 @@ const advisors = [
 
 const builders = [
     { name: 'Vũ Đình Hiếu', role: 'CTO', imgSrc: hieuImg },
-    { name: 'Nguyễn Hải Nam', role: 'Developer', imgSrc: hungImg },
-    { name: 'Nguyễn Bá Hùng', role: 'Developer', imgSrc: namImg },
+    { name: 'Nguyễn Hải Nam', role: 'Developer', imgSrc: namImg },
+    { name: 'Nguyễn Bá Hùng', role: 'Developer', imgSrc: hungImg },
     { name: 'Nguyễn Thị Thoa', role: 'Business Analyst', imgSrc: thoaImg },
     { name: 'Phùng Thị Hồng Vân', role: 'Business Analyst' },
 ];
