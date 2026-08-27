@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck } from 'lucide-react';
-import { AnimatedCounter, FloatingCrossGrid } from '../ui';
+import { AnimatedCounter, FloatingCrossGrid, PartnerCard } from '../ui';
 
 const appleEase = [0.16, 1, 0.3, 1];
 
@@ -54,7 +54,7 @@ export function TrustIndicators() {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left shrink-0">
             <p className="text-caption uppercase tracking-widest text-accent font-semibold mb-1">
               Hợp tác chiến lược
             </p>
@@ -63,26 +63,15 @@ export function TrustIndicators() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center justify-center w-full lg:w-auto">
             {partners.map((partner, i) => (
-              <motion.div
+              <PartnerCard
                 key={partner.name}
-                className="flex items-center gap-3.5 p-3 px-5 rounded-apple bg-surface/80 border border-border/60 shadow-xs hover:shadow-md transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.9, delay: 0.2 + i * 0.15, ease: appleEase }}
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="h-10 w-auto object-contain"
-                />
-                <div className="text-left">
-                  <p className="text-body-sm font-bold text-text leading-tight">{partner.name}</p>
-                  <p className="text-[12px] text-text-secondary">{partner.role}</p>
-                </div>
-              </motion.div>
+                name={partner.name}
+                role={partner.role}
+                logo={partner.logo}
+                index={i}
+              />
             ))}
           </div>
         </div>

@@ -5,4 +5,5 @@ export * from './AnimatedCounter';
 export * from './KineticText';
 export * from './BentoCard';
 export * from './FloatingDecorations';
-
+export * from './PartnerCard';
+export * from './ShootingStars';

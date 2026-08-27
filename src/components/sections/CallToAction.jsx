@@ -1,12 +1,15 @@
 import React from 'react';
-import { Button, KineticText, AppleAppStoreBadge, GooglePlayBadge, FloatingSparkle } from '../ui';
+import { Button, KineticText, AppleAppStoreBadge, GooglePlayBadge, FloatingSparkle, ShootingStars } from '../ui';
 import { motion } from 'framer-motion';
 
 const appleEase = [0.16, 1, 0.3, 1];
 
 export function CallToAction() {
   return (
-    <section className="py-section-lg bg-gradient-to-b from-[#0D281E] via-[#081C15] to-[#04100C] relative overflow-hidden text-white">
+    <section className="py-section-lg bg-[radial-gradient(ellipse_at_bottom,_#164435_0%,_#0a231a_45%,_#030c08_100%)] relative overflow-hidden text-white">
+      {/* Shooting Stars Night Sky Background from Codepen */}
+      <ShootingStars count={20} />
+
       {/* Floating Sparkle SVGs */}
       <FloatingSparkle className="top-14 left-16 hidden sm:block text-accent-light/80" delay={0} size={28} />
       <FloatingSparkle className="top-24 right-20 hidden sm:block text-accent/70" delay={1.2} size={24} />
@@ -15,10 +18,10 @@ export function CallToAction() {
 
       {/* Breathing ambient glow */}
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[440px] bg-accent/25 blur-[140px] pointer-events-none rounded-full"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[440px] bg-accent/20 blur-[140px] pointer-events-none rounded-full z-[2]"
         animate={{
           scale: [1, 1.2, 1],
-          opacity: [0.22, 0.38, 0.22],
+          opacity: [0.2, 0.35, 0.2],
         }}
         transition={{
           duration: 8,

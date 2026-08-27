@@ -75,3 +75,82 @@
 .crown-back  { animation: crown-back-scroll  2s linear infinite; }
 .crown-front { animation: crown-front-scroll  4s linear infinite; }
 .crown-sheen { animation: crown-sheen-scroll  4s linear infinite; }
+
+/* Shooting Stars Effect */
+@keyframes star-tail {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 110px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes star-shining {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 32px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes star-shooting {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(340px);
+  }
+}
+
+.night-sky {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  transform: rotateZ(45deg);
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.shooting_star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(77, 182, 172, 1), rgba(0, 105, 92, 0));
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px rgba(77, 182, 172, 0.9));
+  animation:
+    star-tail var(--duration, 3000ms) ease-in-out infinite,
+    star-shooting var(--duration, 3000ms) ease-in-out infinite;
+  animation-delay: var(--delay, 0ms);
+}
+
+.shooting_star::before,
+.shooting_star::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(0, 105, 92, 0), rgba(224, 242, 241, 1), rgba(0, 105, 92, 0));
+  border-radius: 100%;
+  animation: star-shining var(--duration, 3000ms) ease-in-out infinite;
+  animation-delay: var(--delay, 0ms);
+}
+
+.shooting_star::before {
+  transform: translateX(50%) rotateZ(45deg);
+}
+
+.shooting_star::after {
+  transform: translateX(50%) rotateZ(-45deg);
+}
