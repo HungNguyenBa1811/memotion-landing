@@ -34,7 +34,7 @@ export function AnimatedCounter({
   }, [springValue, decimals]);
 
   return (
-    <span ref={ref} className={className}>
+    <span ref={ref} className={`tabular-nums ${className}`}>
       {prefix}
       {decimals > 0 ? displayValue.toFixed(decimals) : Math.round(displayValue)}
       {suffix}

@@ -99,9 +99,9 @@ export function Hero() {
                                 </div>
                                 <div className="text-left">
                                     <p className="text-[11px] uppercase tracking-wider text-text-tertiary font-semibold">Góc gập khớp gối</p>
-                                    <p className="text-body font-bold text-text">
+                                    <p className="text-body font-bold font-mono text-text">
                                         <AnimatedCounter value={105} duration={2.2} suffix="°" />
-                                        <span className="text-[12px] font-medium text-primary ml-1.5">(Chuẩn y khoa)</span>
+                                        <span className="font-sans text-[12px] font-medium text-primary ml-1.5">(Chuẩn y khoa)</span>
                                     </p>
                                 </div>
                             </motion.div>

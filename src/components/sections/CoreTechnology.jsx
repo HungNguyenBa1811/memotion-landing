@@ -99,7 +99,7 @@ export function CoreTechnology() {
                                                         : 'bg-surface/60 border-border/50 hover:bg-surface/90'
                                                 }`}
                                             >
-                                                <span className={`text-caption font-bold block mb-0.5 transition-colors ${
+                                                <span className={`text-caption font-bold font-mono tracking-wider block mb-0.5 transition-colors ${
                                                     isActive ? 'text-primary' : 'text-accent'
                                                 }`}>
                                                     {step.num}
