@@ -2,8 +2,6 @@ import React, { useRef, useEffect, useCallback } from 'react';
 import gsap from 'gsap';
 import { cn } from '../../lib/utils';
 
-// ── Shaders ──────────────────────────────────────────────────────────
-
 const VERTEX_SHADER = `
   attribute vec2 a_position;
   void main() {
@@ -116,8 +114,6 @@ const FRAGMENT_SHADER = `
   }
 `;
 
-// ── Default config ───────────────────────────────────────────────────
-
 const DEFAULT_CONFIG = {
   noiseType: 'trig',
   restingSpeed: 0.35,
@@ -135,8 +131,6 @@ const DEFAULT_CONFIG = {
   restingDuration: 3,
   restingEase: 'power2.out',
 };
-
-// ── WebGL helpers ────────────────────────────────────────────────────
 
 function compileShader(gl, type, source) {
   const shader = gl.createShader(type);
@@ -166,8 +160,6 @@ function createProgram(gl) {
   }
   return program;
 }
-
-// ── Component ────────────────────────────────────────────────────────
 
 export function ChaosButton({ children, className, config: userConfig, ...props }) {
   const buttonRef = useRef(null);

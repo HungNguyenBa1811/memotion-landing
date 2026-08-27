@@ -37,4 +37,42 @@ export const CrownIcon = () => {
             </g>
         </svg>
     );
-}
+};
+
+export const AppleAppStoreBadge = ({ className = 'h-11' }) => (
+    <div className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white text-[#0D281E] hover:bg-white/95 transition-all shadow-md active:scale-95 cursor-pointer ${className}`}>
+        <svg className="w-5 h-5 fill-current" viewBox="0 0 170 170">
+            <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.69-7.87-12-14.49-6.09-9.35-10.8-19.74-14.13-31.18-3.33-11.44-5-22.18-5-32.22 0-14.14 3.5-25.96 10.51-35.48 7-9.52 16.03-14.38 27.08-14.59 4.8 0 10.02 1.25 15.66 3.75 5.64 2.5 9.3 3.81 11 3.93 1.48-.12 5.3-1.48 11.46-4.08 6.16-2.6 11.66-3.8 16.5-3.6 12.28.63 22.09 4.96 29.43 12.98-10.74 6.53-16 15.45-15.77 26.77.23 8.82 3.66 16.21 10.29 22.17 6.63 5.96 14.54 9.28 23.74 9.96-2.12 6.53-4.8 13.06-8.03 19.59zM119.22 33.14c0-7.39 2.65-14.39 7.95-21 5.3-6.61 11.96-10.97 19.98-13.08.73 7.82-1.74 15.04-7.41 21.65-5.67 6.61-12.51 10.86-20.52 12.43z"/>
+        </svg>
+        <div className="text-left">
+            <p className="text-[9px] uppercase tracking-wider font-semibold text-text-tertiary leading-none">Tải trên</p>
+            <p className="text-[14px] font-bold text-text leading-tight tracking-tight">App Store</p>
+        </div>
+    </div>
+);
+
+export const GooglePlayBadge = ({ className = 'h-11' }) => (
+    <div className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/10 text-white border border-white/20 hover:bg-white/15 transition-all shadow-md active:scale-95 cursor-pointer backdrop-blur-md ${className}`}>
+        <svg className="w-5 h-5 fill-current" viewBox="0 0 512 512">
+            <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 59.7.0-.2zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
+        </svg>
+        <div className="text-left">
+            <p className="text-[9px] uppercase tracking-wider font-semibold text-white/70 leading-none">Tải trên</p>
+            <p className="text-[14px] font-bold text-white leading-tight tracking-tight">Google Play</p>
+        </div>
+    </div>
+);
+
+export const BiomechanicalJointTracker = ({ className = 'w-full h-full' }) => (
+    <svg className={className} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="40" r="14" stroke="#00695C" strokeWidth="2.5" strokeDasharray="3 3" />
+        <line x1="100" y1="54" x2="100" y2="100" stroke="#00695C" strokeWidth="3" />
+        <line x1="100" y1="100" x2="60" y2="140" stroke="#00695C" strokeWidth="3" />
+        <line x1="60" y1="140" x2="110" y2="175" stroke="#D87659" strokeWidth="3.5" />
+        <circle cx="100" cy="100" r="6" fill="#00695C" />
+        <circle cx="60" cy="140" r="7" fill="#D87659" />
+        <circle cx="110" cy="175" r="5" fill="#4DB6AC" />
+        <path d="M 75 125 A 25 25 0 0 1 85 155" stroke="#D87659" strokeWidth="2" fill="none" strokeDasharray="2 2" />
+        <text x="88" y="145" fill="#D87659" fontSize="11" fontWeight="bold">105°</text>
+    </svg>
+);

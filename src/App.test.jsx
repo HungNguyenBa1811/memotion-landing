@@ -12,7 +12,7 @@ describe('Memotion Landing Page', () => {
 
   it('renders the hero section headline', () => {
     render(<App />);
-    expect(screen.getByText(/Đồng hành phục hồi/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Đồng hành phục hồi/i })).toBeInTheDocument();
   });
 
   it('renders the core technology section', () => {
@@ -22,12 +22,12 @@ describe('Memotion Landing Page', () => {
 
   it('renders the mission section', () => {
     render(<App />);
-    expect(screen.getByText(/tuổi già không bao giờ là rào cản/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /tuổi già không bao giờ là rào cản/i })).toBeInTheDocument();
   });
 
   it('renders the team section', () => {
     render(<App />);
-    expect(screen.getByText(/Chuyên gia & Cố vấn/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Chuyên gia & Cố vấn/i })).toBeInTheDocument();
   });
 
   it('renders the footer copyright', () => {

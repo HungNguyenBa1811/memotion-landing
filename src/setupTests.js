@@ -5,7 +5,9 @@ class MockIntersectionObserver {
   constructor(callback) {
     this.callback = callback;
   }
-  observe = vi.fn();
+  observe = vi.fn((target) => {
+    this.callback([{ isIntersecting: true, target }]);
+  });
   unobserve = vi.fn();
   disconnect = vi.fn();
 }

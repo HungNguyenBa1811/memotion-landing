@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Footer } from './components/layout';
+import { Header, Footer } from '@/components/layout';
 import {
   Hero,
   TrustIndicators,
@@ -8,7 +8,7 @@ import {
   Team,
   CallToAction,
   Testimonials
-} from './components/sections';
+} from '@/components/sections';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <TrustIndicators />
         <CoreTechnology />
         <Mission />
         <Testimonials />
